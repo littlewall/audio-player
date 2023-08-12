@@ -1,8 +1,28 @@
 {
   "name": "@lwdev/audio-player",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "packageManager": "yarn@3.6.0",
+  "author": "Milan Zítka <mz@milanzitka.cz",
+  "homepage": "https://audio-player.littlewall.dev",
+  "license": "MIT",
+  "keywords": [
+    "web components",
+    "audio player"
+  ],
+  "main": "dist/lw-audio-player.umd.cjs",
+  "module": "dist/lw-audio-player.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lw-audio-player.js",
+      "require": "./dist/lw-audio-player.umd.cjs"
+    }
+  },
+  "files": [
+    "dist/lw-audio-player.js",
+    "dist/lw-audio-player.umd.cjs",
+    "package.json"
+  ],
   "scripts": {
     "start": "vite",
     "build": "vite build",

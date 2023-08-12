@@ -9,9 +9,9 @@ export default defineConfig({
         cssMinify: 'lightningcss',
         minify: true,
         lib: {
-          entry: resolve(__dirname, 'src/components/components.ts'),
-          name: 'LWAudioPlayer',
-          fileName: 'lw-audio-player',
+            entry: resolve(__dirname, 'src/components/components.ts'),
+            name: 'LWAudioPlayer',
+            fileName: 'lw-audio-player',
         },
     },
     css: {
