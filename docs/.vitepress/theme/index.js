@@ -4,5 +4,5 @@ import './custom.css';
 
 export default {
     ...DefaultTheme,
-    Layout: MyLayout
+    Layout: MyLayout,
 };

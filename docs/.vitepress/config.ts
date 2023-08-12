@@ -24,6 +24,16 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/littlewall/audio-player' }
-    ]
-  }
+    ],
+  },
+
+  head: [
+    [
+      'script',
+      {
+        type: "module",
+        src: 'https://cdn.jsdelivr.net/npm/@lwdev/audio-player@latest'
+      }
+    ],
+  ]
 })
