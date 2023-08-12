@@ -1,0 +1,21 @@
+{
+  "extends": "@atomico/tsconfig/base.json",
+  "include": [
+      "src/**/*",
+      ".eslintrc.cjs",
+      "vite.config.js"
+  ],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+          "name": "typescript-plugin-css-modules",
+          "options": {
+          "customMatcher": "\\.module\\.css$",
+          "postcssOptions": true
+          }
+      }
+      ],
+      "types": ["vite/client"]
+  }
+}

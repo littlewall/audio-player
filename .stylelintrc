@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "@dvdevcz/stylelint-config/config"
+  ],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ejs",
+    "**/*.json",
+    "**/*.lock",
+    "**/*.woff",
+    "**/*.jpg",
+    "**/*.png",
+    "**/*.svg"
+  ],
+  "rules": {
+    "value-keyword-case": ["lower", {"ignoreProperties": ["composes"]}],
+    "csstree/validator": {
+      "properties": {
+        "composes": "<custom-ident>+ [ from [ <string> | global ] ]?"
+      },
+      "ignoreAtrules": [
+        "custom-media"
+      ]
+    }
+  }
+}

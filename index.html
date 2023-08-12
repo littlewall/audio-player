@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LW Audio Player - preview</title>
+        <script async type="module" src="./src/components/components.ts"></script>
+    </head>
+    <body>
+        <div style="min-height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 100%; max-width: 600px;">
+                <lw-audio-player
+                    artist="Milan Zítka"
+                    cover="/images/yellow-world.jpg"
+                    playlist="Yellow World (EP, 2023)"
+                >
+                    <lw-audio-player-song
+                        url="/audio/milan-zitka_yellow_world.mp3"
+                        title="Yellow World"
+                    ></lw-audio-player-song>
+                    <lw-audio-player-song 
+                        url="/audio/milan-zitka_yellow_world.mp3"
+                        title="Dancin' my dream"
+                    ></lw-audio-player-song>
+                </lw-audio-player>
+                <lw-audio-player
+                    artist="Milan Zítka"
+                    cover="/images/yellow-world.jpg"
+                    playlist="Yellow World (EP, 2023)"
+                    primary-color="#96c21c"
+                    default-volume="50"
+                >
+                    <lw-audio-player-song
+                        url="/audio/milan-zitka_yellow_world.mp3"
+                        title="Yellow World"
+                    ></lw-audio-player-song>
+                </lw-audio-player>
+            </div>
+        </div>
+    </body>
+</html>

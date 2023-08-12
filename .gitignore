@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+dist
+types
+.DS_STORE
+.cache
+.temp
+node_modules/
+dist/
+/**/cache/**/*
