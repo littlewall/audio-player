@@ -1,8 +1,8 @@
 <script setup>
   import DefaultTheme from 'vitepress/theme';
-  import "../../../src/components/components";
+  import "https://cdn.jsdelivr.net/npm/@lwdev/audio-player@latest";
 
-  const { Layout } = DefaultTheme;
+  const {Layout} = DefaultTheme;
 </script>
 
 <template>
