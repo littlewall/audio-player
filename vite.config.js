@@ -1,15 +1,22 @@
 import atomico from '@atomico/vite';
 import svgr from "vite-plugin-svgr";
 import {defineConfig} from 'vite';
+import {resolve} from 'path';
 
 export default defineConfig({
     build: {
         target: 'modules',
-        cssMinify: 'lightningcss'
+        cssMinify: 'lightningcss',
+        minify: true,
+        lib: {
+          entry: resolve(__dirname, 'src/components/components.ts'),
+          name: 'LWAudioPlayer',
+          fileName: 'lw-audio-player',
+        },
     },
     css: {
         transformer: 'lightningcss',
-        lightningcss:{
+        lightningcss: {
           browserslist: '>= 0.25%',
           drafts: {
               nesting: true,

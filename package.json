@@ -1,5 +1,5 @@
 {
-  "name": "lw-audio-player",
+  "name": "@lwdev/audio-player",
   "version": "0.0.1",
   "private": true,
   "type": "module",

@@ -5,9 +5,6 @@ layout: home
 hero:
   name: "LW Audio Player"
   tagline: "Audio player web component with optional playlist/album view"
-  image:
-    src: /logo.png
-    alt: LW Audio Player
   actions:
     - theme: brand
       text: Examples

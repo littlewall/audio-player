@@ -9,6 +9,7 @@ import {
 } from 'atomico';
 import {useStore} from '@atomico/store/hooks';
 import {useSlot} from '@atomico/hooks/use-slot';
+import {useResizeObserverState} from '@atomico/hooks/use-resize-observer';
 import WaveSurfer from 'wavesurfer.js';
 import clsx from 'clsx';
 import Store from '../../store';
@@ -35,9 +36,11 @@ const player = ({
     const playerId = useId();
     const store = useStore(Store);
     const slotRef = useRef();
+    const playerRef = useRef();
     const waveContainerRef = useRef();
     const volumeSliderRef = useRef();
     const childNodes = useSlot(slotRef);
+    const playerSize = useResizeObserverState(playerRef);
     const [,activeSongData] = Object
         .entries((store.state.songs[playerId] || {}))
         .find(([id]) => id === store.state.activeSong[playerId]) || [];
@@ -153,7 +156,7 @@ const player = ({
 
         const initialProgress = (defaultVolume / volumeSliderRef.current.max) * 100;
 
-        volumeSliderRef.current.style.background = `linear-gradient(to right, ${primaryColor} ${initialProgress}%, #ccc ${initialProgress}%)`;
+        volumeSliderRef.current.style.background = `linear-gradient(to right, var(--lwap-primary-color) ${initialProgress}%, #ccc ${initialProgress}%)`;
 
         volumeSliderRef.current.addEventListener('input', (event: InputEvent) => {
             const tempSliderValue = Number((event.target as HTMLInputElement).value);
@@ -167,7 +170,7 @@ const player = ({
 
             const progress = (tempSliderValue / volumeSliderRef.current.max) * 100;
 
-            volumeSliderRef.current.style.background = `linear-gradient(to right, ${primaryColor} ${progress}%, #ccc ${progress}%)`;
+            volumeSliderRef.current.style.background = `linear-gradient(to right, var(--lwap-primary-color) ${progress}%, #ccc ${progress}%)`;
         });
 
         return () => {
@@ -179,11 +182,17 @@ const player = ({
         <host
             shadowDom
             style={{
-                '--primary-color': primaryColor,
+                '--lwap-primary-color': primaryColor,
             }}
         >
             <style>{rawStyles}</style>
-            <div className={styles.player}>
+            <div
+                className={clsx(
+                    styles.player,
+                    playerSize?.width > 500 && styles.largePlayer,
+                )}
+                ref={playerRef}
+            >
                 <div className={styles.activeSong}>
                     <div className={styles.cover}>
                         <img
@@ -318,10 +327,12 @@ player.props = {
     },
     defaultVolume: {
         type: Number,
+        default: 30,
         reflect: true,
     },
     primaryColor: {
         type: String,
+        default: '#ffc107',
         reflect: true,
     },
 };

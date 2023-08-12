@@ -3,7 +3,8 @@
   "include": [
       "src/**/*",
       ".eslintrc.cjs",
-      "vite.config.js"
+      "vite.config.js",
+      "docs/**/*"
   ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
