@@ -1077,6 +1077,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lwdev/audio-player@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@lwdev/audio-player@workspace:."
+  dependencies:
+    "@atomico/hooks": ^3.49.1
+    "@atomico/store": ^1.0.2
+    "@atomico/tsconfig": ^1.0.0
+    "@atomico/vite": ^2.9.2
+    "@babel/core": ^7.15.8
+    "@dvdevcz/eslint-config-typescript": ^0.0.5
+    "@dvdevcz/stylelint-config": ^0.0.3
+    "@types/eslint": ^8
+    atomico: latest
+    clsx: ^1.2.1
+    eslint: ^8.44.0
+    eslint-import-resolver-typescript: ^3.5.5
+    eslint-plugin-import: ^2.27.5
+    lightningcss: ^1.21.5
+    stylelint: ^15.6.3
+    typescript: ^5.1.6
+    typescript-plugin-css-modules: ^5.0.1
+    vite: ^4.4.3
+    vite-plugin-svgr: ^3.2.0
+    vitepress: ^1.0.0-rc.4
+    wavesurfer.js: ^7.1.1
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -4593,34 +4621,6 @@ __metadata:
   checksum: 18f101675fe283bc09cda0ef1e3cc83781aeb8373b439f086f758d1d91b28730950db785999cd060d3c825a8571c03073e8c14512b6655af2188d623031baf50
   languageName: node
   linkType: hard
-
-"lw-audio-player@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "lw-audio-player@workspace:."
-  dependencies:
-    "@atomico/hooks": ^3.49.1
-    "@atomico/store": ^1.0.2
-    "@atomico/tsconfig": ^1.0.0
-    "@atomico/vite": ^2.9.2
-    "@babel/core": ^7.15.8
-    "@dvdevcz/eslint-config-typescript": ^0.0.5
-    "@dvdevcz/stylelint-config": ^0.0.3
-    "@types/eslint": ^8
-    atomico: latest
-    clsx: ^1.2.1
-    eslint: ^8.44.0
-    eslint-import-resolver-typescript: ^3.5.5
-    eslint-plugin-import: ^2.27.5
-    lightningcss: ^1.21.5
-    stylelint: ^15.6.3
-    typescript: ^5.1.6
-    typescript-plugin-css-modules: ^5.0.1
-    vite: ^4.4.3
-    vite-plugin-svgr: ^3.2.0
-    vitepress: ^1.0.0-rc.4
-    wavesurfer.js: ^7.1.1
-  languageName: unknown
-  linkType: soft
 
 "magic-string@npm:^0.26.5":
   version: 0.26.7
