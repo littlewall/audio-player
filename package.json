@@ -1,6 +1,6 @@
 {
   "name": "@lwdev/audio-player",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "packageManager": "yarn@3.6.0",
   "author": "Milan Zítka <mz@milanzitka.cz",
