@@ -1,9 +1,9 @@
 {
   "extends": "@atomico/tsconfig/base.json",
   "include": [
-      "src/**/*",
+      "component/src/**/*",
       ".eslintrc.cjs",
-      "vite.config.js",
+      "component/vite.config.js",
       "docs/**/*"
   ],
   "compilerOptions": {

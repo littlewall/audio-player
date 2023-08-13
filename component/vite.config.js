@@ -12,6 +12,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/components/components.ts'),
             name: 'LWAudioPlayer',
             fileName: 'lw-audio-player',
+            formats: ['es'],
         },
     },
     css: {

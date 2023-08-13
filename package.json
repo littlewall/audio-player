@@ -1,6 +1,6 @@
 {
   "name": "@lwdev/audio-player",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "packageManager": "yarn@3.6.0",
   "author": "Milan Zítka <mz@milanzitka.cz",
@@ -10,37 +10,27 @@
     "web components",
     "audio player"
   ],
-  "main": "dist/lw-audio-player.js",
-  "module": "dist/lw-audio-player.js",
+  "main": "component/dist/lw-audio-player.js",
   "exports": {
     ".": {
-      "import": "./dist/lw-audio-player.js",
-      "require": "./dist/lw-audio-player.umd.cjs"
+      "import": "./component/dist/lw-audio-player.js"
     }
   },
   "files": [
-    "dist/lw-audio-player.js",
-    "dist/lw-audio-player.umd.cjs",
+    "component/dist/lw-audio-player.js",
     "package.json"
   ],
+  "workspaces": [
+    "component"
+  ],
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "dev": "cd component && yarn dev",
+    "build": "cd component && yarn build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "dependencies": {
-    "@atomico/hooks": "^3.49.1",
-    "@atomico/store": "^1.0.2",
-    "atomico": "latest",
-    "clsx": "^1.2.1",
-    "wavesurfer.js": "^7.1.1"
-  },
   "devDependencies": {
-    "@atomico/tsconfig": "^1.0.0",
-    "@atomico/vite": "^2.9.2",
-    "@babel/core": "^7.15.8",
     "@dvdevcz/eslint-config-typescript": "^0.0.5",
     "@dvdevcz/stylelint-config": "^0.0.3",
     "@types/eslint": "^8",
@@ -51,8 +41,6 @@
     "stylelint": "^15.6.3",
     "typescript": "^5.1.6",
     "typescript-plugin-css-modules": "^5.0.1",
-    "vite": "^4.4.3",
-    "vite-plugin-svgr": "^3.2.0",
     "vitepress": "^1.0.0-rc.4"
   }
 }
