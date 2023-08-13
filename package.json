@@ -1,6 +1,6 @@
 {
   "name": "@lwdev/audio-player",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "packageManager": "yarn@3.6.0",
   "author": "Milan Zítka <mz@milanzitka.cz",
@@ -10,15 +10,14 @@
     "web components",
     "audio player"
   ],
-  "main": "component/dist/lw-audio-player.js",
+  "main": "dist/lw-audio-player.js",
   "exports": {
     ".": {
-      "import": "./component/dist/lw-audio-player.js"
+      "import": "./dist/lw-audio-player.js"
     }
   },
   "files": [
-    "/component/dist/lw-audio-player.js",
-    "/package.json"
+    "/dist/lw-audio-player.js"
   ],
   "workspaces": [
     "component"

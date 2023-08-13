@@ -14,6 +14,7 @@ export default defineConfig({
             fileName: 'lw-audio-player',
             formats: ['es'],
         },
+        outDir: '../dist',
     },
     css: {
         transformer: 'lightningcss',
