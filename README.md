@@ -24,6 +24,13 @@ Audio player web component with optional playlist/album view
 </lw-audio-player>
 ```
 
+## v1.0 checklist
+* [x] core functions
+* [ ] better design
+* [ ] assets lazyload
+* [ ] separate CDN and npm build
+* [ ] finished documentation
+
 ## License
 
 MIT License.
