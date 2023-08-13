@@ -2,11 +2,14 @@
 
 Audio player web component with optional playlist/album view
 
+[![package-badge]][package]
+[![jsdelivr-badge]][jsdelivr]
+
 ## Screenshot
 ![LW Audio Player](lw-audio-player.png)
 
 ## Docs
-[audio-player.littlewall.dev](https://audio-player.littlewall.dev)
+You can find documentation at [audio-player.littlewall.dev](https://audio-player.littlewall.dev)
 
 ## Quick start
 
@@ -34,3 +37,8 @@ Audio player web component with optional playlist/album view
 ## License
 
 MIT License.
+
+[package]: https://www.npmjs.com/package/@lwdev/audio-player
+[package-badge]: https://img.shields.io/npm/v/@lwdev/audio-player?style=flat-square
+[jsdelivr]: https://www.jsdelivr.com/package/npm/@lwdev/audio-player
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@lwdev/audio-player/badge
